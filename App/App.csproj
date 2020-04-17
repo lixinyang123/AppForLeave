@@ -1,0 +1,320 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{6E20BCBC-9478-414D-A175-0E8FEFDD7641}</ProjectGuid>
+    <OutputType>AppContainerExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>App</RootNamespace>
+    <AssemblyName>App</AssemblyName>
+    <DefaultLanguage>zh-CN</DefaultLanguage>
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.18362.0</TargetPlatformVersion>
+    <TargetPlatformMinVersion>10.0.17763.0</TargetPlatformMinVersion>
+    <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WindowsXamlEnableOverview>true</WindowsXamlEnableOverview>
+    <AppxPackageSigningEnabled>false</AppxPackageSigningEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <OutputPath>bin\ARM\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM64'">
+    <OutputPath>bin\ARM64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CheckDataDialog.cs" />
+    <Compile Include="Controls\IsLongTimeDialog.cs" />
+    <Compile Include="Controls\WarningDialog.cs" />
+    <Compile Include="Model\Address.cs" />
+    <Compile Include="Model\Arg.cs" />
+    <Compile Include="Model\BaseTamplate.cs" />
+    <Compile Include="Model\MyEvent.cs" />
+    <Compile Include="Model\Reason.cs" />
+    <Compile Include="Model\Tamplate.cs" />
+    <Compile Include="Model\User.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Style\MyAcrylicBrush.cs" />
+    <Compile Include="ViewModel\BackgroundViewModel.cs" />
+    <Compile Include="ViewModel\EventViewModel.cs" />
+    <Compile Include="ViewModel\UserViewModel.cs" />
+    <Compile Include="View\BlankPage1.xaml.cs">
+      <DependentUpon>BlankPage1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\BlankPage2.xaml.cs">
+      <DependentUpon>BlankPage2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\FeedBackPage.xaml.cs">
+      <DependentUpon>FeedBackPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\HelpPage.xaml.cs">
+      <DependentUpon>HelpPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Properties\Default.rd.xml" />
+    <Content Include="Assets\LockScreenLogo.scale-200.png" />
+    <Content Include="Assets\SplashScreen.scale-200.png" />
+    <Content Include="Assets\Square150x150Logo.scale-200.png" />
+    <Content Include="Assets\Square44x44Logo.scale-200.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
+    <Content Include="Assets\StoreLogo.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-200.png" />
+    <Content Include="View\Resource\Assets\help1.png" />
+    <Content Include="View\Resource\Assets\help2.png" />
+    <Content Include="View\Resource\Assets\help3.png" />
+    <Content Include="View\Resource\Assets\help4.png" />
+    <Content Include="View\Resource\Assets\Logo.png" />
+    <Content Include="View\Resource\Assets\send.png" />
+    <Content Include="View\Resource\Assets\yes.png" />
+    <Content Include="View\Resource\background\1.jpg" />
+    <Content Include="View\Resource\background\10.jpg" />
+    <Content Include="View\Resource\background\11.jpg" />
+    <Content Include="View\Resource\background\12.jpg" />
+    <Content Include="View\Resource\background\13.jpg" />
+    <Content Include="View\Resource\background\14.jpg" />
+    <Content Include="View\Resource\background\2.jpg" />
+    <Content Include="View\Resource\background\3.jpg" />
+    <Content Include="View\Resource\background\4.jpg" />
+    <Content Include="View\Resource\background\5.jpg" />
+    <Content Include="View\Resource\background\6.jpg" />
+    <Content Include="View\Resource\background\7.jpg" />
+    <Content Include="View\Resource\background\8.jpg" />
+    <Content Include="View\Resource\background\9.jpg" />
+    <Content Include="View\Resource\boss\lh.png" />
+    <Content Include="View\Resource\class\dsj1802.png" />
+    <Content Include="View\Resource\class\gg1701.png" />
+    <Content Include="View\Resource\class\jw1701.png" />
+    <Content Include="View\Resource\class\rj1701.png" />
+    <Content Include="View\Resource\class\rj1704.png" />
+    <Content Include="View\Resource\class\rj1706.png" />
+    <Content Include="View\Resource\class\rj1708.png" />
+    <Content Include="View\Resource\date\1.png" />
+    <Content Include="View\Resource\date\10.png" />
+    <Content Include="View\Resource\date\11.png" />
+    <Content Include="View\Resource\date\12.png" />
+    <Content Include="View\Resource\date\13.png" />
+    <Content Include="View\Resource\date\14.png" />
+    <Content Include="View\Resource\date\15.png" />
+    <Content Include="View\Resource\date\16.png" />
+    <Content Include="View\Resource\date\17.png" />
+    <Content Include="View\Resource\date\18.png" />
+    <Content Include="View\Resource\date\19.png" />
+    <Content Include="View\Resource\date\2.png" />
+    <Content Include="View\Resource\date\20.png" />
+    <Content Include="View\Resource\date\21.png" />
+    <Content Include="View\Resource\date\22.png" />
+    <Content Include="View\Resource\date\23.png" />
+    <Content Include="View\Resource\date\24.png" />
+    <Content Include="View\Resource\date\25.png" />
+    <Content Include="View\Resource\date\26.png" />
+    <Content Include="View\Resource\date\27.png" />
+    <Content Include="View\Resource\date\28.png" />
+    <Content Include="View\Resource\date\29.png" />
+    <Content Include="View\Resource\date\3.png" />
+    <Content Include="View\Resource\date\30.png" />
+    <Content Include="View\Resource\date\31.png" />
+    <Content Include="View\Resource\date\4.png" />
+    <Content Include="View\Resource\date\5.png" />
+    <Content Include="View\Resource\date\6.png" />
+    <Content Include="View\Resource\date\7.png" />
+    <Content Include="View\Resource\date\8.png" />
+    <Content Include="View\Resource\date\9.png" />
+    <Content Include="View\Resource\myevent\Address\hj.png" />
+    <Content Include="View\Resource\myevent\Address\sqyy.png" />
+    <Content Include="View\Resource\myevent\Address\ss.png" />
+    <Content Include="View\Resource\myevent\Address\ssxx.png" />
+    <Content Include="View\Resource\myevent\Address\yy.png" />
+    <Content Include="View\Resource\myevent\reason\fs.png" />
+    <Content Include="View\Resource\myevent\reason\sb.png" />
+    <Content Include="View\Resource\myevent\reason\ss.png" />
+    <Content Include="View\Resource\myevent\reason\wy.png" />
+    <Content Include="View\Resource\myevent\reason\ys.png" />
+    <Content Include="View\Resource\name\cyh.png" />
+    <Content Include="View\Resource\name\dyj.png" />
+    <Content Include="View\Resource\name\fjh.png" />
+    <Content Include="View\Resource\name\glb.png" />
+    <Content Include="View\Resource\name\hy.png" />
+    <Content Include="View\Resource\name\hz.png" />
+    <Content Include="View\Resource\name\lc.png" />
+    <Content Include="View\Resource\name\lhf.png" />
+    <Content Include="View\Resource\name\lk.png" />
+    <Content Include="View\Resource\name\lkn.png" />
+    <Content Include="View\Resource\name\lx.png" />
+    <Content Include="View\Resource\name\lxy.png" />
+    <Content Include="View\Resource\name\ly.png" />
+    <Content Include="View\Resource\name\mqf.png" />
+    <Content Include="View\Resource\name\my.png" />
+    <Content Include="View\Resource\name\syc.png" />
+    <Content Include="View\Resource\name\syx.png" />
+    <Content Include="View\Resource\name\wjc.png" />
+    <Content Include="View\Resource\name\wjy.png" />
+    <Content Include="View\Resource\name\wlj.png" />
+    <Content Include="View\Resource\name\wtx.png" />
+    <Content Include="View\Resource\name\ymz.png" />
+    <Content Include="View\Resource\name\zeq.png" />
+    <Content Include="View\Resource\name\zll.png" />
+    <Content Include="View\Resource\name\zsh.png" />
+    <Content Include="View\Resource\name\zsk.png" />
+    <Content Include="View\Resource\name\zyx.png" />
+    <Content Include="View\Resource\sex\f.png" />
+    <Content Include="View\Resource\sex\m.png" />
+    <Content Include="View\Resource\teacher\ljs.png" />
+    <Content Include="View\Resource\teacher\lw.png" />
+    <Content Include="View\Resource\teacher\lx.png" />
+    <Content Include="View\Resource\teacher\wjm.png" />
+    <Content Include="View\Resource\teacher\wyl.png" />
+    <Content Include="View\Resource\teacher\ycy.png" />
+    <Content Include="View\Resource\year\2018.png" />
+    <Content Include="View\Resource\year\2019.png" />
+    <Content Include="View\Resource\year\2020.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
+      <Version>6.2.9</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="View\BlankPage1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\BlankPage2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\FeedBackPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\HelpPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
+    <VisualStudioVersion>14.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

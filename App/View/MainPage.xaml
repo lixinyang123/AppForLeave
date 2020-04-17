@@ -1,0 +1,84 @@
+﻿<Page
+    x:Class="App.View.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:App.View"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Name="mygrid" Background="YellowGreen">
+
+        <Grid Name="glassHost"/>
+
+        <SplitView Name="mysplitview" OpenPaneLength="300" DisplayMode="Overlay">
+            <SplitView.Content>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="80"/>
+                        <RowDefinition Height="190"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="70"/>
+                    </Grid.RowDefinitions>
+
+                    <ToggleSwitch Name="btn_AcrylicBrush" Header="AcrylicBrush" Margin="10,0,0,0" OffContent="OFF" OnContent="ON" FontWeight="Bold" Toggled="btn_AcrylicBrush_Toggled"/>
+                    <TextBlock Name="txt_restart" Text="重启应用生效" Foreground="Red" Grid.Row="1" Margin="5,0,0,0" FontWeight="Bold"/>
+
+                    <TextBlock Text="RELAX" Foreground="OrangeRed" FontFamily="segoe script" FontSize="65" 
+                               FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,20,0,0"/>
+
+                    <StackPanel Orientation="Vertical" Grid.Row="1" HorizontalAlignment="Center" Margin="0,10,0,0">
+                        <AutoSuggestBox Name="autoSuggestBox" QueryIcon="Find" PlaceholderText="Search Name" 
+                                        Margin="0,0,0,10" Width="300" QuerySubmitted="autoSuggestBox_QuerySubmitted" 
+                                        TextChanged="autoSuggestBox_TextChanged"/>
+                        <DatePicker Name="datepicker" BorderBrush="Black" VerticalAlignment="Center" Width="300"/>
+                        <StackPanel Orientation="Horizontal">
+                            <Button Name="btn_template" Width="145" Height="35" Margin="0,10,10,0" Content="Template" 
+                                    Click="btn_template_Click"/>
+                            <ComboBox Name="combobox2" Width="145" Height="35" Margin="0,10,0,0" 
+                                      ItemsSource="{x:Bind eventViewModel.myReasons}" PlaceholderText="Reason"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="0,10,0,0" Width="300">
+                            <ToggleButton Name="btn_m" Width="100" Height="35" Content="MALE" Click="btn_SelectSex"/>
+                            <ToggleButton Name="btn_all" Width="100" Height="35" Content="ALL" Click="btn_SelectSex" 
+                                          TabIndex="0" IsChecked="True"/>
+                            <ToggleButton Name="btn_f" Width="100" Height="35" Content="FEMALE" Click="btn_SelectSex"/>
+                        </StackPanel>
+                    </StackPanel>
+
+                    <ListView Name="ListView" Grid.Row="2" ItemsSource="{x:Bind userViewModel.users}" Width="300" 
+                              HorizontalAlignment="Center" BorderBrush="Black">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Name}"/>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+
+                    <Button Name="button_ok" Grid.Row="3" Content="OK" Width="100" HorizontalAlignment="Center" 
+                            VerticalAlignment="Center" Click="button_ok_Click"/>
+                    <HyperlinkButton Name="btn_link" Content="如何添加姓名？" Margin="0,0,20,0" Grid.Row="3" 
+                                     HorizontalAlignment="Right" VerticalAlignment="Center" FontWeight="Bold" 
+                                     Click="HyperlinkButton_Click"/>
+                </Grid>
+            </SplitView.Content>
+
+            <SplitView.Pane>
+                <GridView ItemsSource="{x:Bind backgroundViewModel.templates}" 
+                          Background="BlueViolet" 
+                          IsItemClickEnabled="True" ItemClick="GridView_ItemClick">
+                    <GridView.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Vertical">
+                                <Image Source="{Binding Source}" Width="145" Height="145" Margin="0,10,0,0"/>
+                                <TextBlock Text="{Binding Name}" HorizontalAlignment="Center"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </GridView.ItemTemplate>
+                </GridView>
+            </SplitView.Pane>
+        </SplitView>
+
+    </Grid>
+</Page>

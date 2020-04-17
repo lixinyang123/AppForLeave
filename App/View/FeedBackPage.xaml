@@ -1,0 +1,28 @@
+﻿<Page
+    x:Class="App.View.FeedBackPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:App.View"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Background="BlueViolet">
+        <StackPanel HorizontalAlignment="Center" Margin="0,20,0,0">
+            <Image Source="resource/assets/send.png" Width="100"/>
+            <TextBlock Text="Feed Back" Margin="0,20,0,0" FontWeight="Bold" FontSize="48" HorizontalAlignment="Center" FontFamily="sthupo"/>
+            <TextBlock FontSize="20" FontWeight="Bold" TextWrapping="Wrap" Text="请将你的姓名，性别，班级，以及班主任姓名，发送到下方的电子邮件地址" Margin="20,20,20,0"/>
+            <TextBlock FontSize="20" FontWeight="Bold" TextWrapping="Wrap" Text="开发者会尽快回复，你最快会在第二天晚上收到支持你的软件更新" HorizontalAlignment="Center" Margin="20,20,20,0"/>
+            <TextBlock FontSize="20" FontWeight="Bold" TextWrapping="Wrap" Text="我们尊重您的隐私，并且绝不会滥用您的信息，详细请参照隐私条款" HorizontalAlignment="Center" Margin="20,20,20,0"/>
+            <StackPanel Orientation="Horizontal" Margin="0,20,0,0" HorizontalAlignment="Center">
+                <TextBlock FontSize="20" FontWeight="Bold" Text="隐私条款：" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <HyperlinkButton Content="点击查看" FontWeight="Bold" FontSize="20" Click="HyperlinkButton_Click_1"/>
+            </StackPanel>
+            <TextBox Name="txtbox" Text="lixinyangemil@outlook.com" Margin="0,20,0,0" FontSize="20" IsEnabled="False" HorizontalAlignment="Center"/>
+            <Button Content="复制邮箱" HorizontalAlignment="Center" Margin="0,10,0,0" Click="Button_Click"/>
+            <TextBlock Name="txt_successful" Text="Successful" FontSize="30" Margin="0,20,0,0" FontFamily="freestyle script" HorizontalAlignment="Center" FontWeight="Bold" Visibility="Collapsed"/>
+            <HyperlinkButton Content="Go Back" HorizontalAlignment="Center" Margin="0,20,0,0" FontWeight="Bold" FontSize="20" Click="HyperlinkButton_Click"/>
+        </StackPanel>
+    </Grid>
+</Page>
